@@ -1,0 +1,9 @@
+
+Main{
+  min-height: 100vh;
+  background-image: url("../images/skills_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+

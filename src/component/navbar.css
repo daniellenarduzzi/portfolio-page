@@ -1,0 +1,65 @@
+button{
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  color: white !important;
+  margin: 0px 10px 0px 10px;
+}
+
+navbar button:hover {
+  border-bottom: 5px solid white !important;
+}
+.menu{
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  color: white !important;
+  font-size: 20px;
+}
+.menu:active{
+  animation-name: rotate;
+  animation-duration: 1s;
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(3600deg)
+  }
+}
+
+
+navbar{
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+}
+
+
+@media (max-width: 600px){
+  navbar{
+    flex-direction: column;
+    position: fixed;
+    left: 0vw;
+    top: 20vh;
+    height: 60vh;
+    justify-content: space-around;
+    animation-name: from-left;
+    animation-duration: 1s;
+    width: 100vw;
+  }
+@keyframes from-left {
+  from {
+    left:-100vw;
+  }
+
+  to {
+    left: 0vw;
+  }
+}
+
+}

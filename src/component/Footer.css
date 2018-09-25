@@ -1,0 +1,10 @@
+
+Footer {
+  min-height: 10vh;
+  box-shadow: -50vw -30px 40px #007fce,
+  -0px -30px 40px #007fce,
+  50vw -30px 40px #007fce;
+  position: relative;
+  background: #007fce;
+  color: black;
+}
