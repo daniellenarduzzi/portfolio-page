@@ -6,15 +6,18 @@ import React, {
 class Header extends Component {
   render() {
     return ( 
-      < header className = "dark-theme flex flex-column flex-cross-center flex-main-space-around" >
-        <img className="profile" src="./images/profile.jpg"/>
-        <h1>
+      < header >
+        < div className = "contain">
+          <div className="profile-img-container">
+            <img className="profile" src="./images/profile.jpg" />
+          </div>
+          <div class= "header-title">
           DANIEL LENARDUZZI
-
-        </h1>
-        <h2>
-          Blockchain Dev
-        </h2>
+          <br/>
+          Blockchain & Full-Stack Dev
+          </div>
+        </div>
+        < img className = "background" src = "./images/header_background.jpg" / >
       </header>
     );
   }

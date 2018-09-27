@@ -1,8 +1,18 @@
 .App {
   text-align: center;
   overflow: hidden;
+font-family: 'Share Tech Mono', monospace;
+  background-color: #fff;
+}
+html,
+body {
+  margin: 0;
+  padding: 0
 }
 
+html {
+  overflow-x: hidden;
+}
 .flex{
   display: flex;
 }
@@ -21,15 +31,17 @@
 .flex-main-space-around{
   justify-content: space-around;
 }
+.backround{
+  content: " ";
+  position: absolute;
+  width: 100vw;
+  min-height: 450vh;
+  top: 100vh;
+  left: 0vw;
+  background-color: #fff;
+}
 
-.dark-theme{
-  background-color: black;
-  color: white;
-}
-.light-theme {
-  background-color: white;
-  color: black;
-}
-.default-padding{
-  padding: 5vw;
+p{
+font-family: 'Raleway',
+sans-serif;
 }

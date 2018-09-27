@@ -1,6 +1,5 @@
 import './App.css';
 import './Footer.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React, {
   Component
 } from 'react';
@@ -9,11 +8,17 @@ var FA = require('react-fontawesome')
 class Footer extends Component {
   render() {
     return ( 
-      < footer >
-        < h6 > < FA name = "envelope" / > daniellenarduzzi@gmail.com   </h6>
-        < h6 > < FA name = "linkedin" / > linkedin.com/in/daniellenarduzzi/ < /h6>
-        < h6 > < FA name = "github" / > github.com/daniellenarduzzi < /h6>
-      </footer>
+      < div className="footer" id="footer" >
+        <div className="footer-flex-container">
+          <div className="footer-container">
+            <p> I’ m always looking to meet new people and work on interesting stuff.<br/> Send me an email at <a href = "mailto:daniellenarduzzi@gmail.com" >daniellenarduzzi@gmail.com</a> and lets grab coffee or meet virtually! < /p >
+            < a href = "mailto:daniellenarduzzi@gmail.com" > < FA name = "envelope-square" / > < /a>
+            < a target = "blank"
+            href = "https://www.linkedin.com/in/daniellenarduzzi/" > < FA name = "linkedin-square" / > < /a >
+            < a href = "https://github.com/daniellenarduzzi" > < FA name = "github-square" / > < /a>
+          </div>
+        </div>
+      </div>
     );
   }
 }

@@ -1,9 +1,30 @@
 
-Main{
-  min-height: 150vh;
-  background-image: url("../images/main_background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.education{
+  min-height: 100vh;
+  background-color: #fff;
 }
 
+.education_photo {
+  position: absolute;
+  width: 25vw;
+  height: 100vh;
+  right: 0vw;
+  top: 400vh;
+  clip-path: polygon(0% 50% , 100% 0% , 100% 100% , 0% 80%);
+}
+.education-title{
+    position: absolute;
+    top: 405vh;
+    left: 0vw;
+    width: 50vw;
+    text-align: center;
+    font-size: 10vw;
+}
+.education-body{
+    position: absolute;
+    top: 430vh;
+    right: 35vw;
+    width: 60vw;
+    text-align: center;
+    font-size: 15px;
+}

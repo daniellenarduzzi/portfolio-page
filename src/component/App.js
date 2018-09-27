@@ -1,23 +1,26 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './navbar.css';
 import React, { Component } from 'react';
 import Header from './Header'
-import Main from './Main'
+import About from './About'
+import Education from './Education'
+import Projects from './Projects'
+import Skills from './Skills'
 import Footer from './Footer'
+var FA = require('react-fontawesome')
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      showNavbar: false,
       width: 0,
       height: 0,
       top: 0,
+      showNavbar: false,
     };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     this.updateScreenTop = this.updateScreenTop.bind(this);
-
   }
 
   componentDidMount() {
@@ -34,9 +37,8 @@ class App extends Component {
     this.setState({
       width: window.innerWidth,
       height: window.innerHeight,
+
     });
-    console.log(this.state.height);
-    
   }
 
   updateScreenTop() {
@@ -44,28 +46,57 @@ class App extends Component {
       top: window.pageYOffset,
     });
   }
+  
+  toggleNavbar = () => {
+    this.setState({
+      showNavbar: !this.state.showNavbar
+    })
+  }
 
   render() {
+    
     return (
       <div className="App flex flex-direction-column">
-           < link href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-           rel = "stylesheet" / >
-        <Header />
-        < Main width = {
-          this.state.width
-        }
-        height = {
+        < Header height = {
           this.state.height
         }
-
         top = {
           this.state.top
         }
         />
+        {
+        (this.state.showNavbar || this.state.width > 600) && this.state.top > this.state.height ?
+          < navbar className = "flex" >
+            < a href="#about" > About me < /a> 
+            < a href="#projects" > Projects < /a> 
+            < a href="#skills" > Skills < /a> 
+            < a href="#education" > Education < /a> 
+            < a href="#footer" > Contact me < /a> 
+          </navbar>   
+        : null
+        } 
+        {
+        this.state.width < 600 && this.state.top > this.state.height ?
+          < button  
+          onClick = { this.toggleNavbar} 
+          className={this.state.top/this.state.height>3.5 ? "changeColor menu" : "menu"}
+          >
+          { this.state.showNavbar ?
+            < FA name = "close" / >
+            : < FA name = "bars" / >
+          }
+          < /button >
+        : null
+        }
+        <div className="background" />
+        < About />
+        < Skills / >
+        < Projects / >
+        < Education / >
         <Footer />
       </div>
     );
   }
 }
 
-export default App;
+export default App

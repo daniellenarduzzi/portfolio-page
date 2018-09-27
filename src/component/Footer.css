@@ -1,10 +1,37 @@
 
-Footer {
-  min-height: 10vh;
-  box-shadow: -50vw -30px 40px #007fce,
-  -0px -30px 40px #007fce,
-  50vw -30px 40px #007fce;
-  position: relative;
+.footer {
+  min-height: 100vh;
   background: #007fce;
-  color: black;
-}
+  color: white;
+  clip-path: polygon(0% 40% , 75% 0% , 100% 20% , 100% 100% , 0% 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color:rgba(4, 36, 49, 150);
+  }
+  .footer-container{
+    width: 250px;
+  }
+  .footer-container a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-container a span{
+    font-size: 50px;
+    margin: 15px;
+  }
+
+  .footer-container p{
+    font-size: 18px;
+  }
+
+  .footer-flex-container{
+    position: absolute;
+    width: 100vw;
+    height: 60vh;
+    top: 540vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

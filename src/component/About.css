@@ -1,0 +1,77 @@
+.about {
+  min-height: 100vh;
+
+}
+
+.about_bkg_container{
+  position: absolute;
+  width: 66vw;
+  height: 66vh;
+  top: 134vh;
+  left: 34vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_photo {
+  width: 20vh;
+  height: 20vh;
+  clip-path: polygon(25% 0, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
+  position: absolute;
+  top: 175vh;
+  right: 5vw;
+}
+
+.about-title{
+  position: absolute;
+  width: 100vw;
+  top: 105vh;
+  font-size: 10vmin;
+}
+
+.about-body{
+    position: absolute;
+    width: 90vw;
+    top: 110vh;
+    left: 5vw;
+    font-size: 17px;
+}
+
+@media (min-width: 600px){
+  .large-viewport-flex-container-text{
+    position: absolute;
+    top: 100vh;
+    left: 0vh;
+    width: 66vw;
+    height: 66vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-title{
+    position: static;
+  }
+  .about-body {
+    position: static;
+    width: 400px;
+    font-size: 20px;
+  }
+  .large-viewport-flex-container-image{
+    position: absolute;
+    top: 134vh;
+    right: 0vh;
+    width: 66vw;
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about_photo{
+    position: static;
+      width: 40vmin;
+      height: 40vmin;
+  }
+}
+

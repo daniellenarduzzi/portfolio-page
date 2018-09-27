@@ -1,9 +1,39 @@
 
-Main{
+.skills{
   min-height: 100vh;
-  background-image: url("../images/skills_background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
+}
+.skills_photo {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  left: 50vw;
+  top: 200vh;
+  clip-path: polygon(0% 100%, 100% 0%, 100% 90%);
 }
 
+.skills-title {
+  font-size: 10vmin;
+  position: absolute;
+  width: 100vw;
+  top: 205vh;
+}
+
+.skills-body {
+  position: absolute;
+  text-align: initial;
+  top: 208vh;
+  left: 5vw;
+}
+
+.skills-body ul {
+  list-style-type: none;
+  padding: 0 !important;
+}
+
+.skills-subtitle {
+  font-size: 6vmin;
+  margin: 8px 0px 2px 0px;
+  text-decoration: underline;
+  text-align: center;
+}
