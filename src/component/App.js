@@ -7,6 +7,7 @@ import Education from './Education'
 import Projects from './Projects'
 import Skills from './Skills'
 import Footer from './Footer'
+import { text1 } from './text.json'
 var FA = require('react-fontawesome')
 
 class App extends Component {
@@ -46,7 +47,7 @@ class App extends Component {
       top: window.pageYOffset,
     });
   }
-  
+
   toggleNavbar = () => {
     this.setState({
       showNavbar: !this.state.showNavbar
@@ -54,46 +55,40 @@ class App extends Component {
   }
 
   render() {
-    
+
     return (
       <div className="App flex flex-direction-column">
-        < Header height = {
-          this.state.height
-        }
-        top = {
-          this.state.top
-        }
-        />
+        < Header height={this.state.height} top={this.state.top}/>
         {
-        (this.state.showNavbar || this.state.width > 600) && this.state.top > this.state.height ?
-          < navbar className = "flex" >
-            < a href="#about" > About me < /a> 
-            < a href="#projects" > Projects < /a> 
-            < a href="#skills" > Skills < /a> 
-            < a href="#education" > Education < /a> 
-            < a href="#footer" > Contact me < /a> 
-          </navbar>   
-        : null
-        } 
-        {
-        this.state.width < 600 && this.state.top > this.state.height ?
-          < button  
-          onClick = { this.toggleNavbar} 
-          className={this.state.top/this.state.height>3.5 ? "changeColor menu" : "menu"}
-          >
-          { this.state.showNavbar ?
-            < FA name = "close" / >
-            : < FA name = "bars" / >
-          }
-          < /button >
-        : null
+          (this.state.showNavbar || this.state.width > 600) && this.state.top > this.state.height ?
+            <navbar className="flex">
+              <a href="#about"> About me </a>
+              <a href="#projects"> Projects </a>
+              <a href="#skills"> Skills </a>
+              <a href="#education"> Education </a>
+              <a href="#footer"> Contact me </a>
+              <p>{text1}</p>
+            </navbar>
+            : null
         }
-        <div className="background" />
-        < About />
-        < Skills / >
-        < Projects / >
-        < Education / >
-        <Footer />
+        {
+          this.state.width < 600 && this.state.top > this.state.height ?
+            <button onClick={this.toggleNavbar}
+              className={this.state.top / this.state.height > 3.5 ? "changeColor menu" : "menu"}
+            >
+              {this.state.showNavbar ?
+                <FA name="close"/>
+                : <FA name="bars"/>
+              }
+            </button>
+            : null
+        }
+        <div className="background"/>
+        <About/>
+        <Skills/>
+        <Projects/>
+        <Education/>
+        <Footer/>
       </div>
     );
   }
