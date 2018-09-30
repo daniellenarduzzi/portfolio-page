@@ -20,7 +20,8 @@ Header{
 }
 
 .header-title{
-  font-size: 1.8em;
+  font-size: 4vmin;
+  z-index: 1;
 }
 
 .profile-img-container{
@@ -37,18 +38,23 @@ Header{
   z-index: 1;
   width: 150px;
   height: 150px;
-  max-width: 30vw;
-  max-height: 30vw;
+  max-width: 40vw;
+  max-height: 40vw;
   border-radius: 50%;
   border: 1vh solid white;
 }
-.background{
+.poligone{
   position: absolute;
   width: 100vw;
   height: 100vh;
   left: 0vh;
   bottom: 0vh;
-  clip-path: polygon(0% 80%,  100% 60%, 100% 80%, 0% 100%);
- box-shadow: 60px -16px teal;
+}
 
+.first{
+clip-path: polygon(0% 80%,  100% 60%, 100% 80%, 0% 100%);
+}
+.second{
+clip-path: polygon(0% 79%,  100% 59%, 0% 0%);
+background-color: #002249;
 }

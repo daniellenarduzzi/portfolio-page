@@ -7,7 +7,7 @@ font-family: 'Share Tech Mono', monospace;
 html,
 body {
 
-  margin: 0px 0px 0px -3px ;
+  margin: 0px 0px 0px 0% ;
   padding: 0
 }
 
@@ -31,15 +31,6 @@ html {
 
 .flex-main-space-around{
   justify-content: space-around;
-}
-.backround{
-  content: " ";
-  position: absolute;
-  width: 100vw;
-  min-height: 450vh;
-  top: 100vh;
-  left: 0vw;
-  background-color: #fff;
 }
 
 p{

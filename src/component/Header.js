@@ -6,10 +6,10 @@ import React, {
 class Header extends Component {
   render() {
     return ( 
-      < header >
-        < div className = "contain">
+      <header>
+        <div className = "contain">
           <div className="profile-img-container">
-            <img className="profile" src="./images/profile.jpg" />
+            <img className="profile" src="./images/profile.jpg"/>
           </div>
           <div class= "header-title">
           DANIEL LENARDUZZI
@@ -17,7 +17,8 @@ class Header extends Component {
           Blockchain & Full-Stack Dev
           </div>
         </div>
-        < img className = "background" src = "./images/header_background.jpg" / >
+        <img className = "poligone first" src = "./images/header_background.jpg"/>
+        <img className="poligone second"  />
       </header>
     );
   }

@@ -23,10 +23,11 @@ class Projects extends Component {
               technology. At this point I obtained a solid background about the
               blockchain infrastructure. 
               <br/> 
-              Take a look to <a target = "blank" href = {githubLink}> my github
-              page </a>, and also one < a target="blank" href = {mediumLink}>
-              post that I wrote in Medium </a>, to clarify the usage of memory and
-              storage keywords in solidity. 
+              Take a look to 
+              <a target = "blank" href = {githubLink}> my github page </a>, 
+              and also one 
+              < a target="blank" href = {mediumLink}> post that I wrote in Medium </a>,
+              to clarify the usage of memory and storage keywords in solidity. 
             </p>
          </div>
         <img className = "projects_photo" src = "./images/projects_background.jpg" />
