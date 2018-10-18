@@ -38,8 +38,8 @@ Header{
   z-index: 1;
   width: 150px;
   height: 150px;
-  max-width: 40vw;
-  max-height: 40vw;
+  max-width: 30vw;
+  max-height: 30vw;
   border-radius: 50%;
   border: 1vh solid white;
 }
@@ -47,14 +47,38 @@ Header{
   position: absolute;
   width: 100vw;
   height: 100vh;
-  left: 0vh;
-  bottom: 0vh;
+
 }
 
-.first{
-clip-path: polygon(0% 80%,  100% 60%, 100% 80%, 0% 100%);
+header .poligone{
+    left: 0vh;
+  top: 0vh;
 }
-.second{
-clip-path: polygon(0% 79%,  100% 59%, 0% 0%);
+
+#first{
+clip-path: polygon(  66% 100%, 100% 66%, 100% 0%,  66% 0%, 33% 0%, 33% 66%);
+}
+
+#second{
+clip-path: polygon(0% 33%, 33% 66% , 66% 33%,  33% 0%);
 background-color: #002249;
+}
+#fourth{
+clip-path: polygon(33% 0% , 100% 0% , 100% 67%);
+background-color: #fff;
+}
+
+#sixth{
+clip-path: polygon(100% 66%, 100% 100% , 66% 100%);
+background-color: #145a54;
+}
+
+#seventh{
+clip-path: polygon(33% 66%, 66% 100% , 33% 100%);
+background-color: #02405a;
+}
+
+#eighth{
+clip-path: polygon( 0% 33% , 33% 66% , 33% 100%, 0% 66%);
+background-color: #c2e8f6;
 }

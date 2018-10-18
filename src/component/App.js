@@ -8,7 +8,6 @@ import Projects from './Projects'
 import Skills from './Skills'
 import Footer from './Footer'
 var FA = require('react-fontawesome')
-
 class App extends Component {
 
   constructor(props) {
@@ -29,11 +28,7 @@ class App extends Component {
     window.addEventListener('resize', this.updateWindowDimensions);
     window.addEventListener("scroll", this.updateScreenTop);
   }
-/*
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-*/
+
   updateWindowDimensions() {
     this.setState({
       width: window.innerWidth,
@@ -54,13 +49,32 @@ class App extends Component {
     })
   }
 
+  moveImg(from, ratio) {
+    let c
+    if (this.state.top > this.state.height * (from - 2) && this.state.top < this.state.height * from)
+      c = this.state.top / ratio
+    else
+      c = this.state.height*from / ratio
+    console.log(c);
+    
+    return { top: c }
+  }
+
   render() {
 
     return (
       <div className="App flex flex-direction-column">
-        < Header height={this.state.height} top={this.state.top}/>
+        < Header height={this.state.height} 
+                 top={this.state.top}
+                 imgStyle = {this.moveImg(1 , 2)}
+        />
         {(this.state.showNavbar || this.state.width > 600) && this.state.top > this.state.height ?
-          <navbar className="flex" className={this.state.hideOnScroll && this.state.width > 600? "hideNavbar" : "showNavbar"}>
+            <navbar className="flex" 
+                    className={this.state.hideOnScroll  && 
+                    this.state.width > 600              ? 
+                    "hideNavbar"                        :
+                    "showNavbar"
+            }>
               <a href="#about"> About me </a>
               <a href="#projects"> Projects </a>
               <a href="#skills"> Skills </a>
@@ -80,8 +94,11 @@ class App extends Component {
             </button>
           : null
         }
-        <About/>
-        <Skills/>
+        <About height={this.state.height} top={this.state.top}/>
+        <Skills height={this.state.height} 
+                width={this.state.width}
+                top={this.state.top}
+        />
         <Projects/>
         <Education/>
         <Footer/>

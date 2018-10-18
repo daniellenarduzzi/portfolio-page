@@ -10,6 +10,13 @@
   left: 50vw;
   top: 200vh;
   clip-path: polygon(0% 100%, 100% 0%, 100% 90%);
+  overflow: hidden;
+}
+.skills_photo img{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: -50vw;
 }
 
 .skills-title {
@@ -36,4 +43,66 @@
   margin: 8px 0px 2px 0px;
   text-decoration: underline;
   text-align: center;
+}
+
+.carrousel-container{
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    top: 220vh;
+    left: 10vw;
+    overflow: hidden;
+}
+.arrow{
+  position: absolute;
+  top: 220vh;
+  z-index: 1;
+  width: 3vw;
+  height: 50vh;
+  background-color: #000;
+}
+.arrow:hover{
+  background-color: steelblue;
+}
+.left{
+  left: 10vw;
+  clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+
+}
+.right{
+  left: 57vw;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+.carrousel-content{
+  display: flex;
+  height: 50vh;
+  position: relative;
+  transition: left 1s;
+}
+
+.carrousel-item{
+  min-width: 50vw;
+}
+
+#item-1{
+  background-color: #25d;
+}
+#item-2{
+  background-color: #1df;
+}
+#item-3{
+  background-color: #2ed;
+}
+#item-4{
+  background-color: #fed;
+}
+
+@keyframes to-2 {
+  from {
+    left: 0%;
+  }
+
+  to {
+    left: -100%;
+  }
 }
