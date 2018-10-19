@@ -19,13 +19,6 @@
   left: -50vw;
 }
 
-.skills-title {
-  font-size: 10vmin;
-  position: absolute;
-  width: 100vw;
-  top: 205vh;
-}
-
 .skills-body {
   position: absolute;
   text-align: initial;

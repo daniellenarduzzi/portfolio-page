@@ -45,8 +45,9 @@ background-color: #02405a;
     width: 60vw;
     top: 166vh;
     left: 33vw;
-    font-size: 17px;
+    font-size: 3vmin;
     padding: 3vw;
     padding-right: 10vw;
     margin: 0 !important;
 }
+

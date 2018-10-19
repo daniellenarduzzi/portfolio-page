@@ -49,7 +49,6 @@ class Skills extends Component {
   render() {
     return (
       <div className="skills" id="skills">
-        <div className="skills-title">My toolbox</div>
         <div class="arrow left" onClick={()=>this.moveCarousel(-1)}> </div>
         <div class="arrow right" onClick={() => this.moveCarousel(1)}> </div>
         <div className="carrousel-container" > 

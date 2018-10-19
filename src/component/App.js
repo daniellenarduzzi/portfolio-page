@@ -99,7 +99,9 @@ class App extends Component {
                 width={this.state.width}
                 top={this.state.top}
         />
-        <Projects/>
+        <Projects height={this.state.height}
+                  top={this.state.top}
+        />
         <Education/>
         <Footer/>
       </div>

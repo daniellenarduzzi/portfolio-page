@@ -5,6 +5,14 @@ import React, {
 } from 'react'
 
 class Projects extends Component {
+
+  moveImg() {
+    if (this.props.top < this.props.height * 4 && this.props.top > this.props.height*2)
+      var c = (25 * (this.props.top / this.props.height) - 75) + "vw"
+    console.log(c);
+    return { right: c }
+  }
+
   render() {
     let privateTxLink = "https://wiki.parity.io/Private-Transactions.html"
     let githubLink = "https://github.com/daniellenarduzzi"
@@ -12,7 +20,6 @@ class Projects extends Component {
     return ( 
       <div className = "projects" id="projects">
           <div className="container-large-projects">
-            <div className = "projects-title" > Projects </div>
             <p className = "projects-body"> 
               I am actually working in an oracle system for ethereum main
               net and bitsign POA chain. This will work on a UI fully synced 
@@ -29,8 +36,12 @@ class Projects extends Component {
               < a target="blank" href = {mediumLink}> post that I wrote in Medium </a>,
               to clarify the usage of memory and storage keywords in solidity. 
             </p>
-         </div>
-        <img className = "projects_photo" src = "./images/projects_background.jpg" />
+          </div>
+        <div className="projects_photo" >
+          <img src = "./images/projects_background.jpg"
+               style={this.moveImg()}
+          />
+        </div>
       </div>
     );
   }
