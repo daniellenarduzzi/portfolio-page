@@ -3,36 +3,18 @@
 
 }
 
-#sixth-cont{
-clip-path: polygon(66% 0%, 100% 0% , 100% 33%, 66% 66%);
-background-color: #145a54;
-}
-
-#seventh-cont{
-clip-path: polygon(33% 0%, 66% 0% , 66% 66%, 33% 33%);
-background-color: #02405a;
-}
 #eighth{
-  clip-path: polygon( 0% 0% , 33% 33% , 33% 100%, 0% 67%);
+  clip-path: polygon( 0% 10% , 33% 43% , 33% 90%, 0% 57%);
   background-color: #145a54;
-}
-
-.about_photo {
-  width: 20vh;
-  height: 20vh;
-  clip-path: polygon(25% 0, 75% 0%, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0% 75%, 0% 25%);
-  position: absolute;
-  top: 175vh;
-  right: 5vw;
 }
 
 .about-title{
   position: absolute;
-  height: 66vh;
-  width: 66vh;
-  top: 133vh;
-  right: 66vw;
-  font-size: 8vmin;
+  height: 46vh;
+  width: 46vh;
+  top: 143vh;
+  right: 64vw;
+  font-size: 7vmin;
   transform: rotate(-90deg);
   color: #fff;
   display: flex;
@@ -43,11 +25,12 @@ background-color: #02405a;
 .about-body{
     position: absolute;
     width: 60vw;
-    top: 166vh;
-    left: 33vw;
+    height: 66vh;
+    top: 100vh;
+    left: 35vw;
     font-size: 3vmin;
-    padding: 3vw;
-    padding-right: 10vw;
-    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

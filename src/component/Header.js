@@ -16,26 +16,22 @@ class Header extends Component {
       <header>
         <div className = "contain">
           <div class= "header-title">
-            <img className="profile" src="./images/profile.jpg"/>
-            <br />            
             DANIEL LENARDUZZI
             <br/>
             Blockchain Dev
             <br />
             & Full-Stack
+            <br />            
+            <img className="profile" src="./images/profile.jpg"/>
           </div>
         </div>
-        <img  className = "poligone" 
-              id="first" 
-              src = "./images/header_background.jpg"
-              style= {this.props.imgStyle}
-        />
-        <div className="poligone" id="second"  />
-        <div className="poligone" id="third" />
-        <div className="poligone" id="fourth" />
-        <div className="poligone" id="fifth" />
-        <div className="poligone" id="sixth" />
-        <div className="poligone" id="seventh" />
+        <div className = "poligone" 
+              id="first"
+        >
+          <img  src="./images/header_background.jpg"
+                style={this.fallDown()}
+          />
+        </div>
       </header>
     );
   }
