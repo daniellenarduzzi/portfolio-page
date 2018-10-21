@@ -68,13 +68,18 @@ class App extends Component {
                  top={this.state.top}
                  imgStyle = {this.moveImg(1 , 2)}
         />
-        {(this.state.showNavbar || this.state.width > 600) && this.state.top > this.state.height ?
+        {
+          (this.state.showNavbar || this.state.width > 600) &&
+          this.state.top > this.state.height ?
             <navbar className="flex" 
-                    className={this.state.hideOnScroll  && 
-                    this.state.width > 600              ? 
-                    "hideNavbar"                        :
-                    "showNavbar"
-            }>
+                    className=
+                    {
+                      this.state.hideOnScroll && 
+                      this.state.width > 600 ? 
+                        "hideNavbar"                        
+                      : "showNavbar"
+                    }
+            >
               <a href="#about"> About me </a>
               <a href="#projects"> Projects </a>
               <a href="#skills"> Skills </a>
@@ -83,9 +88,16 @@ class App extends Component {
             </navbar>
           : null
         }
-        {this.state.width < 600 && this.state.top > this.state.height ?
-            <button onClick={this.toggleNavbar}
-              className={this.state.top / this.state.height > 3.5 ? "changeColor menu" : "menu"}
+        {
+          this.state.width < 600 &&
+          this.state.top > this.state.height ?
+            <button 
+              onClick={this.toggleNavbar}
+              className={
+              this.state.top / this.state.height > 3.5 ?
+                "changeColor menu" 
+              : "menu"
+              }
             >
               {this.state.showNavbar ?
                 <FA name="close"/>
@@ -94,13 +106,19 @@ class App extends Component {
             </button>
           : null
         }
-        <About height={this.state.height} top={this.state.top}/>
-        <Skills height={this.state.height} 
-                width={this.state.width}
-                top={this.state.top}
+        <About  
+          height={this.state.height}
+          width={this.state.width}        
+          top={this.state.top}
         />
-        <Projects height={this.state.height}
-                  top={this.state.top}
+        <Skills 
+          height={this.state.height} 
+          width={this.state.width}
+          top={this.state.top}
+        />
+        <Projects 
+          height={this.state.height}
+          top={this.state.top}
         />
         <Education/>
         <Footer/>
