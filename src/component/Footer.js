@@ -16,11 +16,21 @@ class Footer extends Component {
               Send me an email at <a href = "mailto:daniellenarduzzi@gmail.com">
               daniellenarduzzi@gmail.com</a> and lets grab coffee or meet virtually! 
             </p>
-            <a href = "mailto:daniellenarduzzi@gmail.com"><FA name = "envelope-square"/> </a>
+            <a href = "mailto:daniellenarduzzi@gmail.com">
+              <FA name = "envelope-square"/>
+            </a>
             <a target = "blank" href = "https://www.linkedin.com/in/daniellenarduzzi/" >
               < FA name = "linkedin-square"/>
             </a>
-            <a href = "https://github.com/daniellenarduzzi"><FA name = "github-square"/></a>
+            <a href = "https://github.com/daniellenarduzzi" target="blank">
+              <FA name = "github-square"/>
+            </a>
+            <a href="https://medium.com/@daniellenarduzzi" target="blank">
+              <FA name="medium" />
+            </a>            
+            <a href="https://t.me/daniellenarduzzi" target="blank">
+              <FA name="telegram" />
+            </a>                      
           </div>
         </div>
       </div>
